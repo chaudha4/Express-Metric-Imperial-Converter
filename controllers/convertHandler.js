@@ -11,6 +11,8 @@ function ConvertHandler() {
   this.getNum = function(input) {
     var result;
     
+    let match = /[\d+]/;
+    
     return result;
   };
   
