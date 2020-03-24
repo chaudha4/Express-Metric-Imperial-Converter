@@ -43,20 +43,19 @@ suite('Unit Tests', function(){
     
     test('Invalid Input (double fraction)', function(done) {
        var input = '64.0/2L';
-      assert.equal(convertHandler.getNum(input),32.0);
+      assert.equal(convertHandler.getNum(input),32);
       done();
     });
     
     test('No Numerical Input', function(done) {
-      var input = 'dd.ddL';
-      console.log(convertHandler.getNum(input)); 
-      assert.isUndefined(convertHandler.getNum(input));
+      var input = 'd64.0/2L';
+      assert.equal(convertHandler.getNum(input), 1);    // Default is 1
       done();
     }); 
     
   });
   
-  suite('Function convertHandler.getUnit(input)', function() {
+  suite('Function convertHandler.getUnit(input)', function() { 
     
     test('For Each Valid Unit Inputs', function(done) {
       var input = ['gal','l','mi','km','lbs','kg','GAL','L','MI','KM','LBS','KG'];
