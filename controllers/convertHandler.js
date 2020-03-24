@@ -9,11 +9,15 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    var result;
     
-    let match = /[\d+]/;
+    let matchStr = /^[\d./]+(?=\D)/g;  // Look for 3.5 or 3.1/2 followed by all text like "Kg" "gal"
+    let result = input.match(matchStr);
     
-    return result;
+    if (result == null) {
+      return 1;
+    }
+    
+    return result[0];
   };
   
   this.getUnit = function(input) {
