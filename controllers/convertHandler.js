@@ -17,7 +17,7 @@ function ConvertHandler() {
       return 1;
     }
     
-    return result[0];
+    return eval(result[0]);
   };
   
   this.getUnit = function(input) {
@@ -82,7 +82,7 @@ function ConvertHandler() {
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
     
-    return initNum + " " + initUnit + " converts to " + returnNum + " " + returnUnit;
+    return initNum + " " + this.spellOutUnit(initUnit) + " converts to " + returnNum + " " + this.spellOutUnit(returnUnit);
   };
   
 }
