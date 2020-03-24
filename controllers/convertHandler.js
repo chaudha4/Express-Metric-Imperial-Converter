@@ -11,7 +11,7 @@ function ConvertHandler() {
   this.getNum = function(input) {
     
     let matchStr = /^[\d./]+(?=\D)/g;  // Look for 3.5 or 3.1/2 followed by all text like "Kg" "gal"
-    let result = input.match(matchStr);
+    let result = input.trim().match(matchStr);
     
     if (result == null) {
       return 1;
@@ -21,21 +21,30 @@ function ConvertHandler() {
   };
   
   this.getUnit = function(input) {
-    var result;
     
-    return result;
+    let matchStr = /(gal|l|mi|km|lbs|kg)$/ig;
+    
+    let result = input.trim().match(matchStr);
+    
+    if (result == null) {
+      return null;
+    }
+    
+    return result[0].toLowerCase();
   };
   
   this.getReturnUnit = function(initUnit) {
-    var result;
-    
-    return result;
+    var input = ['gal','l','mi','km','lbs','kg'];
+    var output = ['l','gal','km','mi','kg','lbs'];    
+        
+    return output[input.indexOf(initUnit)];
   };
 
   this.spellOutUnit = function(unit) {
-    var result;
-    
-    return result;
+    var input = ['gal','l','mi','km','lbs','kg'];
+    var output = ['gallons','liters','miles','kilometers','pounds','kilogram'];    
+        
+    return output[input.indexOf(unit)];
   };
   
   this.convert = function(initNum, initUnit) {
