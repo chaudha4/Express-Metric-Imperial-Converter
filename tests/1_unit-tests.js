@@ -18,7 +18,8 @@ suite('Unit Tests', function(){
     
     test('Whole number input', function(done) {
       var input = '32L';
-      assert.equal(convertHandler.getNum(input),32);
+      var result = convertHandler.getNum(input);
+      assert.equal(result,32);
       done();
     });
     
@@ -48,6 +49,7 @@ suite('Unit Tests', function(){
     
     test('No Numerical Input', function(done) {
       var input = 'dd.ddL';
+      console.log(convertHandler.getNum(input)); 
       assert.isUndefined(convertHandler.getNum(input));
       done();
     }); 
