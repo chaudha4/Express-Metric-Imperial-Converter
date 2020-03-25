@@ -110,27 +110,29 @@ suite('Unit Tests', function(){
     });
     
     test('L to Gal', function(done) {
-      assert.approximately(convertHandler.convert(1,ut[1]),expected,0.1); //0.1 tolerance
-      //done();
+      assert.approximately(convertHandler.convert(1,"l"), 0.26417, 0.1); //0.1 tolerance
+      done();
     });
     
     test('Mi to Km', function(done) {
-      
-      //done();
+      assert.approximately(convertHandler.convert(1,"mi"), 1.6, 0.1); //0.1 tolerance
+      done();
     });
     
     test('Km to Mi', function(done) {
-      
-      //done();
+      assert.approximately(convertHandler.convert(1,"km"), .62, 0.1); //0.1 tolerance
+      done();
     });
     
     test('Lbs to Kg', function(done) {
-      
+      assert.approximately(convertHandler.convert(1,"lbs"), .45, 0.1); //0.1 tolerance
+      done();      
       //done();
     });
     
     test('Kg to Lbs', function(done) {
-      
+      assert.approximately(convertHandler.convert(1,"kg"), 2.2, 0.1); //0.1 tolerance
+      done();      
       //done();
     });
     
