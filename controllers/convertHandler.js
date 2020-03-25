@@ -10,7 +10,7 @@ function ConvertHandler() {
   
   this.getNum = function(input) {
     
-    let matchStr = /^[\d./]+(?=\D)/g;  // Look for 3.5 or 3.1/2 followed by all text like "Kg" "gal"
+    let matchStr = /^[\d./]+(?=\D)/g;  // Look for 3 or 3.5 or 3.1/2 followed by all text like "Kg" "gal"
     let result = input.trim().match(matchStr);
     
     if (result == null) {
