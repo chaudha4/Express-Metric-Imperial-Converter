@@ -76,7 +76,7 @@ function ConvertHandler() {
         // nothing to do;
     }    
     
-    return result;
+    return Math.round(result * 100000) / 100000;
 
   };
   
