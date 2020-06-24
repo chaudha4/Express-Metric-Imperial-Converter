@@ -1,7 +1,8 @@
 # Followed intructions at https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
 
 # specify the node base image with your desired version node:<version>
-FROM node:12
+#FROM node:12
+FROM node:12-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
