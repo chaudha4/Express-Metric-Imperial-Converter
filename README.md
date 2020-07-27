@@ -1,15 +1,10 @@
-**Converter app - Metric to Imperial and vice-versa**
-------
+# Converter app - Metric to Imperial and vice-versa
 
-1) SET NODE_ENV to `test` without quotes
-2) Most logic will need done in `controllers/convertHandler.js` but do complete `routes/api.js`
-3) You will add any security features to `server.js`
-4) You will create all of the functional/unit tests in `tests/2_functional-tests.js` and `tests/1_unit-tests.js`
+An Express Server that implement a REST API to convert between Imperial and Metric units.
 
-**To build**
+# Build Steps
 npm init
 npm install
 
-**To run**
+# Run Steps
 node server.js
-
